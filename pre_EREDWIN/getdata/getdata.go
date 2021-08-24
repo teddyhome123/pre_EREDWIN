@@ -20,7 +20,7 @@ func Time() []string {
 	arr1 := db.DbTime(dbstring)
 	return arr1
 }
-/**標準差**/
+/**RMSE**/
 func RMSE_value() ([]float64,[]float64)  {
 	dbstring := "SELECT top 720 RATIO_6H_lstm,RATIO_12H_lstm,RATIO_24H_lstm,RATIO_48H_lstm,Newpeople_lstm,Total_people_lstm,Total_people2_lstm,Total_people3_lstm,Total_edwin_lstm FROM [EREDWIN].[dbo].[LSTM_outpred]"
 	arr1 := db.Rmse(dbstring)
